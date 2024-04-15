@@ -1,0 +1,140 @@
+.moviesCard {
+  max-width: 270px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.05);
+}
+
+.moviesCard__info {
+  padding: 14px 12px 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+.moviesCard__title {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.moviesCard__button {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background: #F4F4F4;
+}
+
+.moviesCard__button_active {
+  background: #2BE080;
+}
+
+.moviesCard__duration {
+  padding: 0 12px 14px 12px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #A0A0A0;
+  margin: 0;
+}
+
+.moviesCard__image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  background-repeat: no-repeat;
+
+}
+
+@media screen and (max-width: 980px) {
+  .moviesCard {
+    max-width: 335px;
+  }
+
+  .moviesCard__image {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .moviesCard {
+    max-width: 300px;
+  }
+
+  .moviesCard__image {
+    height: 168px;
+  }}
+
+/* places__place */
+.places__place {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 15px 31px 21px;
+    align-items: center;
+  }
+
+  @media all and (max-width: 900px) {
+    .places__place {
+      margin: 25px 15px 21px 21px;
+    }
+  }
+
+  .places__trash {
+/*     background-image: url("../../../images/trash.svg"); */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 18px;
+    height: 19.3px;
+    margin: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: none;
+  }
+
+  .places__trash:hover {
+    opacity: 0.6;
+    transition: opacity 0.5s;
+  }
+
+  .places__trash_active {
+    display: block;
+  }
+
+
+  .
+
+  .places__title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 216px;
+  }
+
+
+  .places__number {
+    width: 22px;
+    height: 19px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+  }

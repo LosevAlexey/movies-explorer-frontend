@@ -1,0 +1,140 @@
+.searchform {
+  padding: 70px 0;
+  margin: 0 70px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.searchform__container {
+  display: flex;
+  height: 72px;
+  background: #FFF;
+  border-radius: 9px;
+  box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.08);
+  padding: 16px 30px 16px 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.searchform__icon img{
+  width: 25px;
+  height: 25px;
+}
+
+.searchform__input {
+  width: 100%;
+  padding: 0 15px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.searchform__button {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 48px;
+  background-color: #3456f3;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 18px;
+  transition: opacity 0.2s linear;
+}
+
+.searchform__line {
+  width: 1px;
+  height: 34px;
+  background-color: #e8e8e8;
+  margin: 0 20px;
+}
+.searchform__toggle {
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*margin: 0 0 40px;*/
+}
+
+.searchform__films {
+  padding-left: 15px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+}
+
+.searchform__input:focus {
+  width: 90%;
+  outline: 1px solid black;
+  border-radius: 50px;
+}
+
+.searchform__input::placeholder {
+  color: #a0a0a0;
+}
+
+.searchform__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+  .searchform {
+    margin: 0 30px;
+    margin-bottom: 80px;
+
+    padding: 80px 0 110px 0;
+  }
+
+  .searchform__container {
+    padding-right: 20px;
+  }
+
+  .searchform__toggle {
+    padding-left: 0;;
+  }
+
+}
+
+.searchform__toggle_bottom {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .searchform__line, .searchform__toggle, .searchform__icon {
+    display: none;
+  }
+
+  .searchform__input {
+    padding: 0;
+  }
+
+  .searchform__toggle_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 45px;
+  }
+
+  .searchform__films {
+    font-size: 11px;
+  }
+  .searchform__input {
+    font-size: 14px;
+  }
+
+  .searchform {
+    padding-bottom: 50px;
+      margin: 0 10px;
+      margin-bottom: 50px;
+
+  }
+
+}

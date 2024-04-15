@@ -1,0 +1,35 @@
+.navitab {
+  height: 66px;
+  background-color: #f5f5f5;
+  text-align: center;
+  gap: 36px;
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.navitab__link {
+  color: black;
+  margin: 25px 0 0 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+@media all and (max-width: 800px) {
+  .navitab {
+    gap: 45px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .navitab {
+    gap: 19px;
+  }
+
+  .navitab__link {
+    font-size: 11px;
+  }
+}
