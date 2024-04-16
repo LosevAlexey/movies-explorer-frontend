@@ -12,7 +12,7 @@ export default function Promo() {
   return (
 
     <section className="promo">
-      <img class="promo__image" src={landinglogo} alt="Картинка к promo"></img>
+      <img className="promo__image" src={landinglogo} alt="Картинка к promo"></img>
       <h1 className="promo__title">Учебный проект студента факультета Веб-разработки.</h1>
     </section>
 

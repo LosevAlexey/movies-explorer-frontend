@@ -1,5 +1,5 @@
 .footer {
-    padding: 59px 70px 20px 70px;
+    padding: 79px 70px 20px 70px;
     display: flex;
     flex-direction: column;
     gap: 19px;
@@ -7,6 +7,7 @@
     width: 100%;
     /* margin: 0 auto; */
     box-sizing: border-box;
+  background: #F8F8F8;
 }
 
 .footer__text {

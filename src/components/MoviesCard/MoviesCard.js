@@ -20,7 +20,7 @@ export default function MoviesCard({movie}) {
   const btnCls = `moviesCard__button ${isLiked ? 'moviesCard__button_active' : ''}`
   return (
       <div className="moviesCard">
-        <img className="moviesCard__image" src={img} />
+        <img className="moviesCard__image" src={img} alt={"movie image"}/>
         <div className="moviesCard__info">
           <h2 className="moviesCard__title">{nameRU}</h2>
           <button type="button" className={btnCls}>

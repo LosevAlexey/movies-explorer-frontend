@@ -6,9 +6,6 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-}
-
-.techs__section {
   padding: 0 70px 100px 70px;
   box-sizing: border-box;
 }
@@ -83,7 +80,7 @@
 }
 
 @media all and (max-width: 800px) {
-  .techs__section {
+  .techs {
     padding: 0 50px 90px 50px;
     box-sizing: border-box;
   }
@@ -116,7 +113,7 @@
 }
 
 @media all and (max-width: 450px) {
-  .techs__section {
+  .techs{
     padding: 0 20px 90px 20px;
     box-sizing: border-box;
   }

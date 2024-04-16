@@ -6,12 +6,12 @@ import phpto from "../../../images/photo.svg";
 
 export default function AboutMe() {
   return (
-    <section id="student" className="aboutme aboutme__section">
+    <section id="student" className="aboutme">
       <div className="aboutme__header">
         <h2 className="aboutme__title">Студент</h2>
       </div>
       <div className="aboutme__container">
-        <div className="aboutme__container_text">
+        <div className="aboutme__wrapper">
           <div>
             <h2 className="aboutme__name">Алексей</h2>
             <p className="aboutme__subtitle">специальность</p>

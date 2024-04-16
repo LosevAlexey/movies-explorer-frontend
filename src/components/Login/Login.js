@@ -7,7 +7,9 @@ import {Link} from "react-router-dom";
 export default function Login({onSubmit}) {
   return (
     <section className="auth">
+      <Link to="/">
       <img className="auth__image" src={Logo} alt="Лого"></img>
+      </Link>
       <h2 className="auth__title">Рады видеть!</h2>
       <form className="auth__form" name="login">
         <div className="auth__formElement">

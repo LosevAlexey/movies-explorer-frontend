@@ -25,7 +25,7 @@ export default function SearchForm() {
           </div>
         </div>
 
-        <div className="searchform__toggle_bottom">
+        <div className="searchform__toggleBottom">
           <FilterCheckbox/>
 
           <p className="searchform__films">Короткометражки</p>

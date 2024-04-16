@@ -8,7 +8,7 @@ export default function Techs() {
 
   return (
 
-    <section className="techs techs__section" id="techs">
+    <section className="techs" id="techs">
 <div className="techs__header">
 <h2 className="techs__title">Технологии</h2>
 </div>

@@ -1,5 +1,5 @@
 .moviesCard {
-  max-width: 270px;
+  max-width: 370px;
   width: 100%;
   overflow: hidden;
   background-color: #FFFFFF;
@@ -32,6 +32,10 @@
   background: #F4F4F4;
 }
 
+.moviesCard__button:hover {
+  opacity: .8;
+}
+
 .moviesCard__button_active {
   background: #2BE080;
 }
@@ -55,7 +59,7 @@
 
 @media screen and (max-width: 980px) {
   .moviesCard {
-    max-width: 335px;
+    /*max-width: 335px;*/
   }
 
   .moviesCard__image {
@@ -66,7 +70,7 @@
 @media screen and (max-width: 480px) {
 
   .moviesCard {
-    max-width: 300px;
+    /*max-width: 300px;*/
   }
 
   .moviesCard__image {

@@ -1,7 +1,12 @@
-.profile {
+.profile__content {
   padding: 74px 30px 70px 30px;
   max-width: 410px;
   margin: 0 auto;
+}
+
+.profile {
+  background: #fafafa;
+  min-height: calc(100vh - 80px);
 }
 
 .profile__title {
@@ -67,6 +72,10 @@
   cursor: pointer;
 }
 
+.profile__buttons > *:hover {
+  opacity: .8;
+}
+
 .profile__edit {
   color: black;
 }
@@ -74,10 +83,11 @@
 .profile__exit {
   color: #EE3465;
   font-weight: 500;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 900px) {
-  .profile {
+  .profile__content {
     padding: 236px 30px 40px 30px;
   }
 
@@ -91,7 +101,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .profile {
+  .profile__content {
     padding: 70px 30px 40px 30px;
   }
 

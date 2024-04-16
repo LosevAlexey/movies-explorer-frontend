@@ -103,7 +103,7 @@
 
 }
 
-.searchform__toggle_bottom {
+.searchform__toggleBottom {
   display: none;
 }
 @media screen and (max-width: 480px) {
@@ -115,7 +115,7 @@
     padding: 0;
   }
 
-  .searchform__toggle_bottom {
+  .searchform__toggleBottom {
     display: flex;
     align-items: center;
     justify-content: center;

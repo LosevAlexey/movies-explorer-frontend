@@ -7,7 +7,7 @@ export default function MoviesCardList() {
   const movies = data.slice(0, 16);
   return (
     <section className={"moviesCardList"}>
-      <ul className={"moviesCardList__container"}>
+      <div className={"moviesCardList__container"}>
         {
           movies.map((movie) => (
             <MoviesCard
@@ -16,7 +16,7 @@ export default function MoviesCardList() {
             />
           ))
         }
-      </ul>
+      </div>
       <button type="button" className="moviesCardList__button">Еще</button>
     </section>
   );

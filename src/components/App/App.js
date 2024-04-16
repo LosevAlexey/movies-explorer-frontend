@@ -20,9 +20,9 @@ function App() {
     return (
         <>
             <Header isAuth={isAuth}/>
-            <main>
+            <>
                 {children}
-            </main>
+            </>
             {
                 footer && <Footer/>
             }

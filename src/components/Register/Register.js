@@ -12,7 +12,9 @@ export default function Register({onSubmit}) {
   }
   return (
     <section className="auth">
+      <Link to="/">
       <img className="auth__image" src={Logo} alt="Лого"></img>
+      </Link>
       <h2 className="auth__title">Добро пожаловать!</h2>
       <form className="auth__form" name="login">
         <div className="auth__formElement">
