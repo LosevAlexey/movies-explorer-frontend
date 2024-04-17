@@ -76,6 +76,10 @@
   border-bottom: 3px;
 }
 
+.auth__submit:disabled {
+  opacity: .8;
+  cursor: default;
+}
 .auth__bottom {
   margin: 16px 0;
   padding: 0;

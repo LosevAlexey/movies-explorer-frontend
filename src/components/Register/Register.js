@@ -1,15 +1,25 @@
 import React from "react";
 import "./Register.css";
 import Logo from "../../images/logo.svg";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import useForm from "../../hooks/useForm";
 
 
-export default function Register({onSubmit}) {
+export default function Register({ onRegister, success, isAuth }) {
+  const { enteredValues, handleChange, isFormValid, resetForm, errors } = useForm();
 
-  const errors = {
-    password: true,
-    email: false
+  const navigate = useNavigate();
+
+
+  if (isAuth) {
+    navigate(-1)
+    return null;
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onRegister(enteredValues);
+  };
   return (
     <section className="auth">
       <Link to="/">
@@ -20,14 +30,18 @@ export default function Register({onSubmit}) {
         <div className="auth__formElement">
           <p className="auth__label">Имя</p>
           <input
-            id="email"
-            name="email"
-            type="email"
-
+            id="name"
+            name="name"
+            type="text"
+            onChange={handleChange}
             className="auth__input"
-            placeholder="Почта"
+            placeholder="Ваше имя"
+            minLength={2}
             required
           />
+          {
+            errors.name && <p className="auth__error">{errors.name }</p>
+          }
         </div>
         <div className="auth__formElement">
           <p className="auth__label">E-mail</p>
@@ -35,11 +49,14 @@ export default function Register({onSubmit}) {
             id="email"
             name="email"
             type="email"
-
+            onChange={handleChange}
             className="auth__input"
             placeholder="Почта"
             required
           />
+          {
+            errors.email && <p className="auth__error">{errors.email }</p>
+          }
         </div>
         <div className="auth__formElement">
           <p className="auth__label">Пароль</p>
@@ -47,19 +64,21 @@ export default function Register({onSubmit}) {
             id="password"
             name="password"
             type="password"
+            onChange={handleChange}
             className="auth__input"
             placeholder="Пароль"
             required
+            minLength={6}
           />
           {
-            errors.password && <p className="auth__error">Что-то пошло не так...</p>
+            errors.password && <p className="auth__error">{ errors.password }</p>
           }
         </div>
 
 
       </form>
 
-      <button type="submit" className="auth__submit auth__submit_register" onClick={onSubmit}>
+      <button type="submit" disabled={!isFormValid} className="auth__submit auth__submit_register" onClick={handleSubmit}>
         Зарегистрироваться
       </button>
       <div className="auth__bottom">

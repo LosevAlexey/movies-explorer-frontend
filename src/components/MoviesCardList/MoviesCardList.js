@@ -1,23 +1,40 @@
 import React from "react";
 import "./MoviesCardList.css";
 import MoviesCard from '../MoviesCard/MoviesCard';
-import {data} from "../../utils/constants";
+import {useLocation} from "react-router-dom";
+import movies from "../Movies/Movies";
 
-export default function MoviesCardList() {
-  const movies = data.slice(0, 16);
+export default function MoviesCardList({
+                                         moviesList,
+                                         savedMoviesToggle,
+                                         filmsSaved,
+                                         filmsRemains,
+                                         handleMore,
+                                         notFound
+                                       }) {
+  const {pathname} = useLocation();
+
   return (
     <section className={"moviesCardList"}>
       <div className={"moviesCardList__container"}>
         {
-          movies.map((movie) => (
+          moviesList.map((movie) => (
             <MoviesCard
-              key={movie.id}
+              key={movie.id || movie.movieId}
               movie={movie}
+              savedMoviesToggle={savedMoviesToggle}
+              filmsSaved={filmsSaved}
             />
           ))
         }
+        {
+          notFound && <div className="moviesCardList__notFound">Ничего не найдено</div>
+        }
       </div>
-      <button type="button" className="moviesCardList__button">Еще</button>
+      {filmsRemains > 0 && pathname !== '/saved-movies' && (
+        <button type="button" className="moviesCardList__button" onClick={handleMore}>Еще</button>
+      )}
+
     </section>
   );
 }
