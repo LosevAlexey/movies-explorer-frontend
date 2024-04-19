@@ -1,0 +1,4 @@
+.movies {
+  background-color: #FAFAFA;
+  min-height: calc(100vh - 250px);
+}
